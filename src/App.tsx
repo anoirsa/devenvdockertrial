@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ClassAttributes, DetailedHTMLProps, HTMLInputTypeAttribute, InputHTMLAttributes, LegacyRef, MutableRefObject, useCallback, useEffect, useRef, useState } from 'react';
+
+import Todos from './components/todo/Todos';
 
 function App() {
+  const [name, setName] = useState<string>('')
+  const inputRef = useRef<HTMLElement>();
+ // inputRef.current?.onFocus
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          sda is here sas
-        </a>
-      </header>
-    </div>
+    <>
+      <p>Life is stange</p>
+      <ul>
+       
+        <li data-testid="listmemeber" >Apple</li>
+        <li data-testid="listmemeber">Banana</li>
+        <li data-testid="listmemeber">Rose</li>
+        <p title='sum'>{(5 + 2) as number}</p>
+      </ul>
+    </>
   );
 }
 
